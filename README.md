@@ -1,8 +1,8 @@
-# 🎥 Multi-Platform Live Streaming Relay
+# Multi-Platform Live Streaming Relay
 
 **Stream once, broadcast everywhere!** This setup allows you to stream from OBS/Streamlabs OBS to a single VPS server, which then relays your stream to **Kick**, **YouTube**, and **Twitch** simultaneously, each with optimized bitrates.
 
-## 🌟 Features
+## Features
 
 - ✅ **Single Upload**: Stream once from your PC, relay to multiple platforms
 - ✅ **Optimized Bitrates**: Platform-specific encoding (Twitch 6Mbps, YouTube 12Mbps, Kick 10Mbps)
@@ -11,7 +11,7 @@
 - ✅ **Easy Configuration**: Automated scripts for setup and key management
 - ✅ **Cost Effective**: No third-party service fees, you control everything
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 [ OBS / Streamlabs OBS ]
@@ -23,7 +23,7 @@
          |------------> Kick (10 Mbps)
 ```
 
-## 📋 Requirements
+## Requirements
 
 ### VPS Specifications
 - **Minimum**: 2 vCPU, 4 GB RAM, 20 GB SSD
@@ -37,7 +37,7 @@
 - [Linode](https://linode.com) - $24/month (4 vCPU, 8GB RAM)
 - [Hetzner](https://hetzner.com) - €15.29/month (4 vCPU, 8GB RAM)
 
-## 🚀 Quick Start
+## Start
 
 ### Step 1: Get Your VPS Ready
 
@@ -104,7 +104,7 @@
    sudo systemctl status nginx-rtmp
    ```
 
-## 🎮 OBS/Streamlabs OBS Setup
+## OBS/Streamlabs OBS Setup
 
 ### OBS Studio Configuration
 
@@ -136,16 +136,10 @@
    - **Audio Bitrate**: 160 kbps
    - **Encoder**: x264 (or Hardware if available)
 
-## 📊 Monitoring Your Streams
+## Monitoring Your Streams
 
 ### Web Dashboard
 Access your streaming dashboard at: `http://YOUR_VPS_IP:8080`
-
-The dashboard shows:
-- 📈 Real-time statistics
-- 🎯 Active streams to each platform
-- 📊 Bandwidth usage
-- ⚡ Server performance
 
 ### Command Line Monitoring
 ```bash
@@ -162,7 +156,7 @@ ps aux | grep nginx
 htop
 ```
 
-## 🔧 Advanced Configuration
+## Configuration
 
 ### Custom Bitrates
 Edit `/usr/local/nginx/conf/nginx.conf` to adjust bitrates:
@@ -175,7 +169,7 @@ exec ffmpeg -i rtmp://localhost/twitch/$name
     ...
 ```
 
-### GPU Acceleration (NVIDIA)
+### GPU Acceleration
 If your VPS has an NVIDIA GPU, enable NVENC:
 
 ```nginx
@@ -203,7 +197,7 @@ application live {
 
 **Note**: This sends the same bitrate to all platforms (limited by Twitch's 6Mbps)
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -234,7 +228,7 @@ sudo journalctl -u nginx-rtmp -n 50
 - Check platform-specific requirements
 - Test with one platform at a time
 
-### Useful Commands
+### Commands
 
 ```bash
 # Restart the service
@@ -259,7 +253,7 @@ free -h
 iftop
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### Firewall Setup
 ```bash
@@ -285,7 +279,7 @@ sudo ufw enable
 - Use strong, unique keys for each platform
 - Consider IP whitelisting for additional security
 
-## 📈 Performance Optimization
+## Performance Optimization
 
 ### VPS Optimization
 ```bash
@@ -304,31 +298,6 @@ sudo sysctl -p
 - Use `-preset fast` for better quality
 - Use `-tune zerolatency` for live streaming
 - Adjust `-threads` based on CPU cores
-
-## 🆘 Support
-
-### Getting Help
-1. **Check the logs**: `sudo journalctl -u nginx-rtmp -f`
-2. **Test configuration**: `sudo /usr/local/nginx/sbin/nginx -t`
-3. **Monitor resources**: `htop` and `iftop`
-4. **Check platform status pages** for service outages
-
-### Useful Resources
-- [Nginx RTMP Module Documentation](https://github.com/arut/nginx-rtmp-module)
-- [FFmpeg Documentation](https://ffmpeg.org/documentation.html)
-- [OBS Studio Documentation](https://obsproject.com/help)
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🎉 Happy Streaming!
-
-You're now ready to stream to multiple platforms simultaneously! Remember to:
-- Test with private streams first
-- Monitor your server resources
-- Keep your stream keys secure
-- Have fun creating content! 🚀
 
 ---
 
