@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- <ApplicationIcon>icon.ico</ApplicationIcon> -->
+    <AssemblyTitle>StreamRelay - Multi-Platform Streaming</AssemblyTitle>
+    <AssemblyDescription>Easy-to-use desktop application for streaming to multiple platforms simultaneously</AssemblyDescription>
+    <AssemblyCompany>StreamRelay</AssemblyCompany>
+    <AssemblyProduct>StreamRelay</AssemblyProduct>
+    <AssemblyCopyright>Copyright © 2024</AssemblyCopyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nginx\**" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="ffmpeg\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

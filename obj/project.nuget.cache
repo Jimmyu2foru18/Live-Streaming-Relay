@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "9D+622eYwoRTRVSEKGZ+eTwvzP3kj6K1KQtG4fWWBt/jirT85hHXG1x5B07E1lIdm7HoticK2yB7oBvX1sOX1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\James\\Desktop\\New folder\\StreamRelay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.36\\microsoft.netcore.app.runtime.win-x64.6.0.36.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.36\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.36.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.36\\microsoft.aspnetcore.app.runtime.win-x64.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
